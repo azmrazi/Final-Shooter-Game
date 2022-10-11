@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\shprojecttile.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\shootereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\unrealeditor\\development\\shooter\\definitions.shooter.h",
+            "c:\\games\\shooter 5.0 - 2\\source\\shooter\\public\\weapon\\shprojecttile.h",
+            "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\shprojecttile.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

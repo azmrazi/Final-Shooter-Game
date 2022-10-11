@@ -1,0 +1,25 @@
+﻿  Using bundled DotNet SDK
+  Log file: C:\Users\azmr2\AppData\Local\UnrealBuildTool\Log.txt
+  Using 'git status' to determine working set for adaptive non-unity build (C:\Games\Shooter 5.0 - 2).
+  Invalidating makefile for ShooterEditor (working set of source files changed)
+  Parsing headers for ShooterEditor
+    Running UnrealHeaderTool "C:\Games\Shooter 5.0 - 2\Shooter.uproject" "C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\ShooterEditor\Development\ShooterEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\azmr2\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for ShooterEditor in 8,2869761 seconds
+  Building ShooterEditor...
+  Using Visual Studio 2022 14.33.31630 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  [Adaptive Build] Excluded from Shooter unity file: SHBaseWeapon.cpp, SHLauncherWeapon.cpp, SHProjectTile.cpp, SHRifleWeapon.cpp
+  Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
+    Executing up to 8 processes, one per physical core
+    Requested 1,5 GB free memory per action, 963,32 MB available: limiting max parallel actions to 1
+  Building 7 actions with 1 process...
+  [1/7] Compile SHLauncherWeapon.cpp
+  [2/7] Compile SHProjectTile.gen.cpp
+  [3/7] Compile Shooter.init.gen.cpp
+  [4/7] Compile SHProjectTile.cpp
+  [5/7] Link UnrealEditor-Shooter.lib
+     Создается библиотека C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.lib и объект C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.exp
+  [6/7] Link UnrealEditor-Shooter.dll
+     Создается библиотека C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.suppressed.lib и объект C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.suppressed.exp
+  [7/7] WriteMetadata ShooterEditor.target
+  Total time in Parallel executor: 23,22 seconds
+  Total execution time: 35,98 seconds

@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Shooter.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Shooter.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ShooterEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
+    </None>
+    <Filter Include="Source\Shooter">
+      <UniqueIdentifier>{E89F5254-55D1-3544-A4A1-A8FB6FBB79B2}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Shooter\Shooter.Build.cs">
+      <Filter>Source\Shooter</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Shooter\Shooter.cpp">
+      <Filter>Source\Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Shooter\Shooter.h">
+      <Filter>Source\Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Shooter\ShooterGameModeBase.cpp">
+      <Filter>Source\Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Shooter\ShooterGameModeBase.h">
+      <Filter>Source\Shooter</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Private">
+      <UniqueIdentifier>{E739247F-225E-38BE-884C-EA40045B93D9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\SHGameModeBase.cpp">
+      <Filter>Source\Shooter\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\Components">
+      <UniqueIdentifier>{2BA8A576-30AD-3662-B0DF-D6A21369D0F6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Components\SHWeaponComponent.cpp">
+      <Filter>Source\Shooter\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Components\SH_HealthComponent.cpp">
+      <Filter>Source\Shooter\Private\Components</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\Dev">
+      <UniqueIdentifier>{68370644-A5C3-3FBB-B478-F8639E869EE3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Dev\SH_DevDamageActor.cpp">
+      <Filter>Source\Shooter\Private\Dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Dev\SH_FireDamageType.cpp">
+      <Filter>Source\Shooter\Private\Dev</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Dev\SH_IceDamageType.cpp">
+      <Filter>Source\Shooter\Private\Dev</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\Player">
+      <UniqueIdentifier>{37DA676F-3534-3900-A5CB-7BB020A10A40}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Player\SHPlayerController.cpp">
+      <Filter>Source\Shooter\Private\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Player\SH_BaseCharacter.cpp">
+      <Filter>Source\Shooter\Private\Player</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\UI">
+      <UniqueIdentifier>{078C2833-640C-3291-86FB-4DB754A1201F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\SHGameHUD.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\Weapon">
+      <UniqueIdentifier>{84C832EE-7572-33F6-959B-207DDF7B358B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Weapon\SHBaseWeapon.cpp">
+      <Filter>Source\Shooter\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Weapon\SHLauncherWeapon.cpp">
+      <Filter>Source\Shooter\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Weapon\SHProjectTile.cpp">
+      <Filter>Source\Shooter\Private\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Weapon\SHRifleWeapon.cpp">
+      <Filter>Source\Shooter\Private\Weapon</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Public">
+      <UniqueIdentifier>{33A9E0AA-DBE0-3191-9D2D-6DB4A98D9D6E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\SHGameModeBase.h">
+      <Filter>Source\Shooter\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\Components">
+      <UniqueIdentifier>{387226A2-33BB-3F6C-A2AD-CACA7204043C}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Components\SHWeaponComponent.h">
+      <Filter>Source\Shooter\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Components\SH_HealthComponent.h">
+      <Filter>Source\Shooter\Public\Components</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\Dev">
+      <UniqueIdentifier>{606CC5D7-04B6-3BDA-90EC-BFEF9E5C71FF}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Dev\SH_DevDamageActor.h">
+      <Filter>Source\Shooter\Public\Dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Dev\SH_FireDamageType.h">
+      <Filter>Source\Shooter\Public\Dev</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Dev\SH_IceDamageType.h">
+      <Filter>Source\Shooter\Public\Dev</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\Player">
+      <UniqueIdentifier>{4918A0D8-611B-3F7D-9A24-C43143BCEC92}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Player\SHPlayerController.h">
+      <Filter>Source\Shooter\Public\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Player\SH_BaseCharacter.h">
+      <Filter>Source\Shooter\Public\Player</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\UI">
+      <UniqueIdentifier>{A9EDB530-4261-344C-830D-C4F09E659E69}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\SHGameHUD.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\Weapon">
+      <UniqueIdentifier>{C39401A1-4E71-38F6-B8CD-E66AEC5C0689}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\SHBaseWeapon.h">
+      <Filter>Source\Shooter\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\SHLauncherWeapon.h">
+      <Filter>Source\Shooter\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\SHProjectTile.h">
+      <Filter>Source\Shooter\Public\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\SHRifleWeapon.h">
+      <Filter>Source\Shooter\Public\Weapon</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

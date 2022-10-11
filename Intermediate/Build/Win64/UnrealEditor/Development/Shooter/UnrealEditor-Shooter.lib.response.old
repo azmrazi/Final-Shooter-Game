@@ -1,0 +1,39 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-Shooter.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\ShooterEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHWeaponComponent.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SH_HealthComponent.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SH_DevDamageActor.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SH_FireDamageType.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SH_IceDamageType.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHPlayerController.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SH_BaseCharacter.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHGameHUD.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHGameModeBase.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\Shooter.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\ShooterGameModeBase.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHBaseWeapon.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHLauncherWeapon.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHRifleWeapon.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHBaseWeapon.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHGameHUD.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHGameModeBase.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHLauncherWeapon.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\Shooter.init.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\ShooterGameModeBase.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHPlayerController.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHRifleWeapon.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SHWeaponComponent.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SH_BaseCharacter.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SH_DevDamageActor.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SH_FireDamageType.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SH_HealthComponent.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\SH_IceDamageType.gen.cpp.obj"
+"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\Default.rc2.res"
+/OUT:"C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.lib"
