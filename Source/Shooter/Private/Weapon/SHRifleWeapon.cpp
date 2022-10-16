@@ -7,8 +7,8 @@
 
 void ASHRifleWeapon::StartFire()
 {
-	MakeShot();
 	GetWorldTimerManager().SetTimer(ShotTimerHandle, this, &ASHRifleWeapon::MakeShot, TimeBetweenShots, true);
+	MakeShot();
 }
 
 void ASHRifleWeapon::StopFire()
@@ -18,10 +18,18 @@ void ASHRifleWeapon::StopFire()
 
 void ASHRifleWeapon::MakeShot()
 {
-	if (!GetWorld()) return;
+	if (!GetWorld() || IsAmmoEmpty())
+	{
+		StopFire();
+		return;
+	}
 
 	FVector TraceStart, TraceEnd;
-	if (!GetTraceData(TraceStart, TraceEnd)) return;
+	if (!GetTraceData(TraceStart, TraceEnd))
+	{
+		StopFire();
+		return;
+	}
 
 	FHitResult HitResult;
 	MakeHit(HitResult, TraceStart, TraceEnd);
@@ -38,7 +46,7 @@ void ASHRifleWeapon::MakeShot()
 		DrawDebugLine(GetWorld(), GetMuzzleWorldLocation(), TraceEnd, FColor::Red, false, 3.0f, 0, 3.0f);
 	}
 
-
+	DecreaseAmmo();
 }
 
 bool ASHRifleWeapon::GetTraceData(FVector& TraceStart, FVector& TraceEnd) const
@@ -52,4 +60,12 @@ bool ASHRifleWeapon::GetTraceData(FVector& TraceStart, FVector& TraceEnd) const
 	const FVector ShootDirection = FMath::VRandCone(ViewRotation.Vector(), HalfRad);
 	TraceEnd = TraceStart + ShootDirection * TraceMaxDistance;
 	return true;
+}
+
+void ASHRifleWeapon::MakeDamage(const FHitResult& HitResult)
+{
+	const auto DamagedActor = HitResult.GetActor();
+	if (!DamagedActor) return;
+
+	DamagedActor->TakeDamage(DamageAmount, FDamageEvent(), GetPlayerController(), this);
 }

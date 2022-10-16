@@ -8,14 +8,25 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPrimitiveComponent;
+class AActor;
+struct FHitResult;
 #ifdef SHOOTER_SHProjectTile_generated_h
 #error "SHProjectTile.generated.h already included, missing '#pragma once' in SHProjectTile.h"
 #endif
 #define SHOOTER_SHProjectTile_generated_h
 
 #define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_SPARSE_DATA
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_RPC_WRAPPERS
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnProjectileHit);
+
+
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnProjectileHit);
+
+
 #define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASHProjectTile(); \

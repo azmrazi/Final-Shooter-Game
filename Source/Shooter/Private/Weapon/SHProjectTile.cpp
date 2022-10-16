@@ -4,6 +4,8 @@
 #include "Weapon/SHProjectTile.h"
 #include "Components/SphereComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "DrawDebugHelpers.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ASHProjectTile::ASHProjectTile()
@@ -13,6 +15,8 @@ ASHProjectTile::ASHProjectTile()
 
 	CollisionComponent = CreateDefaultSubobject<USphereComponent>("SphereComponent");
 	CollisionComponent->InitSphereRadius(5.0f);
+	CollisionComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	CollisionComponent->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
 	SetRootComponent(CollisionComponent);
 
 	MovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>("ProjectileMovementComponent");
@@ -24,9 +28,33 @@ void ASHProjectTile::BeginPlay()
 	Super::BeginPlay();
 	
 	check(MovementComponent);
-
+	check(CollisionComponent);
 	MovementComponent->Velocity = ShotDirection * MovementComponent->InitialSpeed;
-	SetLifeSpan(5.0f);
+
+	CollisionComponent->OnComponentHit.AddDynamic(this, &ASHProjectTile::OnProjectileHit);
+	CollisionComponent->IgnoreActorWhenMoving(GetOwner(), true);
+	SetLifeSpan(LifeSeconds);
+}
+
+void ASHProjectTile::OnProjectileHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp,
+	FVector NormalImpulse, const FHitResult& Hit)
+{
+	if (!GetWorld()) return;
+
+	MovementComponent->StopMovementImmediately();
+	
+	// make damage
+	UGameplayStatics::ApplyRadialDamage(GetWorld(), DamageAmount, GetActorLocation(), DamageRadius, UDamageType::StaticClass(), {GetOwner()}, this, GetController(), DoFullDamage);
+
+	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 24, FColor::Red, false, 5.0f);
+
+	Destroy();
+}
+
+AController* ASHProjectTile::GetController() const
+{
+	const auto Pawn = Cast<APawn>(GetOwner());
+	return Pawn ? Pawn->GetController() : nullptr;
 }
 
 

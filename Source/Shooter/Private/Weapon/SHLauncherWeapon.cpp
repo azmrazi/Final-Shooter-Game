@@ -12,7 +12,7 @@ void ASHLauncherWeapon::StartFire()
 
 void ASHLauncherWeapon::MakeShot()
 {
-	if (!GetWorld()) return;
+	if (!GetWorld() || IsAmmoEmpty()) return;
 
 	FVector TraceStart, TraceEnd;
 	if (!GetTraceData(TraceStart, TraceEnd)) return;
@@ -28,7 +28,9 @@ void ASHLauncherWeapon::MakeShot()
 	if (Projectile)
 	{
 		Projectile->SetShotDirection(Direction);
+		Projectile->SetOwner(GetOwner());
 		Projectile->FinishSpawning(SpawnTransform);
 	}
-	
+	DecreaseAmmo();
 }
+

@@ -36,6 +36,10 @@ void EmptyLinkFunctionForGeneratedCodeSHRifleWeapon() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_BulletSpread_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_BulletSpread;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DamageAmount_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageAmount;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -57,17 +61,25 @@ void EmptyLinkFunctionForGeneratedCodeSHRifleWeapon() {}
 		{ "ModuleRelativePath", "Public/Weapon/SHRifleWeapon.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_TimeBetweenShots = { "TimeBetweenShots", nullptr, (EPropertyFlags)0x0020080000020005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASHRifleWeapon, TimeBetweenShots), METADATA_PARAMS(Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_TimeBetweenShots_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_TimeBetweenShots_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_TimeBetweenShots = { "TimeBetweenShots", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASHRifleWeapon, TimeBetweenShots), METADATA_PARAMS(Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_TimeBetweenShots_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_TimeBetweenShots_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_BulletSpread_MetaData[] = {
 		{ "Category", "SHRifleWeapon" },
 		{ "ModuleRelativePath", "Public/Weapon/SHRifleWeapon.h" },
 	};
 #endif
-	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_BulletSpread = { "BulletSpread", nullptr, (EPropertyFlags)0x0020080000020005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASHRifleWeapon, BulletSpread), METADATA_PARAMS(Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_BulletSpread_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_BulletSpread_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_BulletSpread = { "BulletSpread", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASHRifleWeapon, BulletSpread), METADATA_PARAMS(Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_BulletSpread_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_BulletSpread_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_DamageAmount_MetaData[] = {
+		{ "Category", "SHRifleWeapon" },
+		{ "ModuleRelativePath", "Public/Weapon/SHRifleWeapon.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_DamageAmount = { "DamageAmount", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASHRifleWeapon, DamageAmount), METADATA_PARAMS(Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_DamageAmount_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_DamageAmount_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASHRifleWeapon_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_TimeBetweenShots,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_BulletSpread,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHRifleWeapon_Statics::NewProp_DamageAmount,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASHRifleWeapon_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASHRifleWeapon>::IsAbstract,
@@ -105,9 +117,9 @@ void EmptyLinkFunctionForGeneratedCodeSHRifleWeapon() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHRifleWeapon_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASHRifleWeapon, ASHRifleWeapon::StaticClass, TEXT("ASHRifleWeapon"), &Z_Registration_Info_UClass_ASHRifleWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASHRifleWeapon), 2294031519U) },
+		{ Z_Construct_UClass_ASHRifleWeapon, ASHRifleWeapon::StaticClass, TEXT("ASHRifleWeapon"), &Z_Registration_Info_UClass_ASHRifleWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASHRifleWeapon), 3764144189U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHRifleWeapon_h_2241279946(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHRifleWeapon_h_3656827572(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHRifleWeapon_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHRifleWeapon_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

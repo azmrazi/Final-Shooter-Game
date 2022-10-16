@@ -4,6 +4,7 @@
 #include "Components/SH_HealthComponent.h"
 #include "GameFramework/Actor.h"
 #include "Engine/World.h"
+#include "Kismet/GameplayStatics.h"
 #include "TimerManager.h"
 
 
@@ -15,11 +16,19 @@ USH_HealthComponent::USH_HealthComponent()
 
 }
 
+bool USH_HealthComponent::IsPlayerSpectating() const
+{
 
+	const auto Controller = Cast<APlayerController>(GetOwner());
+	return Controller && Controller->GetStateName() == NAME_Spectating;
+
+}
 // Called when the game starts
 void USH_HealthComponent::BeginPlay()
 {
 	Super::BeginPlay();
+
+	check(MaxHealth > 0);
 
 	SetHealth(MaxHealth);
 	

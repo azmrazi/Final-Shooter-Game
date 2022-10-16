@@ -77,6 +77,9 @@ void ASH_BaseCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCo
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, WeaponComponent, &USHWeaponComponent::StartFire);
 	PlayerInputComponent->BindAction("Fire", IE_Released, WeaponComponent, &USHWeaponComponent::StopFire);
 
+
+	PlayerInputComponent->BindAction("NextWeapon", IE_Pressed, WeaponComponent, &USHWeaponComponent::NextWeapon);
+	PlayerInputComponent->BindAction("Reload", IE_Pressed, WeaponComponent, &USHWeaponComponent::Reload);
 }
 
 float ASH_BaseCharacter::GetMovementDirection() const
@@ -124,6 +127,7 @@ void ASH_BaseCharacter::OnDeath()
 		Controller->ChangeState(NAME_Spectating);
 	}
 	GetCapsuleComponent()->SetCollisionResponseToChannels(ECollisionResponse::ECR_Ignore);  
+	WeaponComponent->StopFire();
 }
 
 void ASH_BaseCharacter::OnHealthChanged(float Health)

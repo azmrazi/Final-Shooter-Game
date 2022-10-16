@@ -29,6 +29,27 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 		P_THIS->OnTakeAnyDamage(Z_Param_DamageActor,Z_Param_Damage,Z_Param_DamageType,Z_Param_InstigatedBy,Z_Param_DamageCauser);
 		P_NATIVE_END;
 	}
+	DEFINE_FUNCTION(USH_HealthComponent::execIsPlayerSpectating)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsPlayerSpectating();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USH_HealthComponent::execIsPlayerAlive)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->IsPlayerAlive();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(USH_HealthComponent::execGetHealthPercent)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(float*)Z_Param__Result=P_THIS->GetHealthPercent();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(USH_HealthComponent::execIsDead)
 	{
 		P_FINISH;
@@ -40,10 +61,46 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 	{
 		UClass* Class = USH_HealthComponent::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "GetHealthPercent", &USH_HealthComponent::execGetHealthPercent },
 			{ "IsDead", &USH_HealthComponent::execIsDead },
+			{ "IsPlayerAlive", &USH_HealthComponent::execIsPlayerAlive },
+			{ "IsPlayerSpectating", &USH_HealthComponent::execIsPlayerSpectating },
 			{ "OnTakeAnyDamage", &USH_HealthComponent::execOnTakeAnyDamage },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics
+	{
+		struct SH_HealthComponent_eventGetHealthPercent_Parms
+		{
+			float ReturnValue;
+		};
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(SH_HealthComponent_eventGetHealthPercent_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Health" },
+		{ "ModuleRelativePath", "Public/Components/SH_HealthComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USH_HealthComponent, nullptr, "GetHealthPercent", nullptr, nullptr, sizeof(Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::SH_HealthComponent_eventGetHealthPercent_Parms), Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_USH_HealthComponent_IsDead_Statics
 	{
@@ -69,6 +126,7 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USH_HealthComponent_IsDead_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Health" },
 		{ "ModuleRelativePath", "Public/Components/SH_HealthComponent.h" },
 	};
 #endif
@@ -79,6 +137,82 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USH_HealthComponent_IsDead_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics
+	{
+		struct SH_HealthComponent_eventIsPlayerAlive_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((SH_HealthComponent_eventIsPlayerAlive_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(SH_HealthComponent_eventIsPlayerAlive_Parms), &Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::Function_MetaDataParams[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Public/Components/SH_HealthComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USH_HealthComponent, nullptr, "IsPlayerAlive", nullptr, nullptr, sizeof(Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::SH_HealthComponent_eventIsPlayerAlive_Parms), Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics
+	{
+		struct SH_HealthComponent_eventIsPlayerSpectating_Parms
+		{
+			bool ReturnValue;
+		};
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	void Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((SH_HealthComponent_eventIsPlayerSpectating_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(SH_HealthComponent_eventIsPlayerSpectating_Parms), &Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::Function_MetaDataParams[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Public/Components/SH_HealthComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USH_HealthComponent, nullptr, "IsPlayerSpectating", nullptr, nullptr, sizeof(Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::SH_HealthComponent_eventIsPlayerSpectating_Parms), Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x54020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -180,7 +314,10 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Shooter,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_USH_HealthComponent_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_USH_HealthComponent_IsDead, "IsDead" }, // 903175415
+		{ &Z_Construct_UFunction_USH_HealthComponent_GetHealthPercent, "GetHealthPercent" }, // 335071551
+		{ &Z_Construct_UFunction_USH_HealthComponent_IsDead, "IsDead" }, // 3004925552
+		{ &Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive, "IsPlayerAlive" }, // 2926110874
+		{ &Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating, "IsPlayerSpectating" }, // 136137182
 		{ &Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage, "OnTakeAnyDamage" }, // 2446575559
 	};
 #if WITH_METADATA
@@ -277,9 +414,9 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SH_HealthComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_USH_HealthComponent, USH_HealthComponent::StaticClass, TEXT("USH_HealthComponent"), &Z_Registration_Info_UClass_USH_HealthComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USH_HealthComponent), 3376093699U) },
+		{ Z_Construct_UClass_USH_HealthComponent, USH_HealthComponent::StaticClass, TEXT("USH_HealthComponent"), &Z_Registration_Info_UClass_USH_HealthComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USH_HealthComponent), 2196470294U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SH_HealthComponent_h_3543664715(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SH_HealthComponent_h_3291529227(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SH_HealthComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SH_HealthComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

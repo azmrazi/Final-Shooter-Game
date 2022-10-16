@@ -17,6 +17,9 @@ class SHOOTER_API ASHGameHUD : public AHUD
 public:
 	virtual void DrawHUD() override;
 
+protected:
+	virtual void BeginPlay() override;
+
 private:
 	void DrawCrossHair();
 	

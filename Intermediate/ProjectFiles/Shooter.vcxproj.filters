@@ -56,6 +56,18 @@
     <ClCompile Include="..\..\Source\Shooter\Private\SHGameModeBase.cpp">
       <Filter>Source\Shooter\Private</Filter>
     </ClCompile>
+    <Filter Include="Source\Shooter\Private\Animations">
+      <UniqueIdentifier>{84A634EC-50E9-35B1-B33B-5E160B87C54C}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Animations\SHAnimNotify.cpp">
+      <Filter>Source\Shooter\Private\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Animations\SHEquipFinishedAnimNotify.cpp">
+      <Filter>Source\Shooter\Private\Animations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Animations\SHReloadFinishedAnimNotify.cpp">
+      <Filter>Source\Shooter\Private\Animations</Filter>
+    </ClCompile>
     <Filter Include="Source\Shooter\Private\Components">
       <UniqueIdentifier>{2BA8A576-30AD-3662-B0DF-D6A21369D0F6}</UniqueIdentifier>
     </Filter>
@@ -77,6 +89,18 @@
     <ClCompile Include="..\..\Source\Shooter\Private\Dev\SH_IceDamageType.cpp">
       <Filter>Source\Shooter\Private\Dev</Filter>
     </ClCompile>
+    <Filter Include="Source\Shooter\Private\Pickups">
+      <UniqueIdentifier>{9DA377E3-9FC1-3B98-B1E7-9276C002BFC3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Pickups\SHAmmoPickup.cpp">
+      <Filter>Source\Shooter\Private\Pickups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Pickups\SHBasePickup.cpp">
+      <Filter>Source\Shooter\Private\Pickups</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Pickups\SHHealthPickup.cpp">
+      <Filter>Source\Shooter\Private\Pickups</Filter>
+    </ClCompile>
     <Filter Include="Source\Shooter\Private\Player">
       <UniqueIdentifier>{37DA676F-3534-3900-A5CB-7BB020A10A40}</UniqueIdentifier>
     </Filter>
@@ -90,6 +114,9 @@
       <UniqueIdentifier>{078C2833-640C-3291-86FB-4DB754A1201F}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Shooter\Private\UI\SHGameHUD.cpp">
+      <Filter>Source\Shooter\Private\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\UI\SHPlayerHUDWidget.cpp">
       <Filter>Source\Shooter\Private\UI</Filter>
     </ClCompile>
     <Filter Include="Source\Shooter\Private\Weapon">
@@ -110,8 +137,26 @@
     <Filter Include="Source\Shooter\Public">
       <UniqueIdentifier>{33A9E0AA-DBE0-3191-9D2D-6DB4A98D9D6E}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\SHCoreTypes.h">
+      <Filter>Source\Shooter\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\SHGameModeBase.h">
       <Filter>Source\Shooter\Public</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\Animations">
+      <UniqueIdentifier>{CDA6F573-05EF-31F0-8F57-051663816BBD}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Animations\AnimUtils.h">
+      <Filter>Source\Shooter\Public\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Animations\SHAnimNotify.h">
+      <Filter>Source\Shooter\Public\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Animations\SHEquipFinishedAnimNotify.h">
+      <Filter>Source\Shooter\Public\Animations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Animations\SHReloadFinishedAnimNotify.h">
+      <Filter>Source\Shooter\Public\Animations</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\Components">
       <UniqueIdentifier>{387226A2-33BB-3F6C-A2AD-CACA7204043C}</UniqueIdentifier>
@@ -134,6 +179,18 @@
     <ClInclude Include="..\..\Source\Shooter\Public\Dev\SH_IceDamageType.h">
       <Filter>Source\Shooter\Public\Dev</Filter>
     </ClInclude>
+    <Filter Include="Source\Shooter\Public\Pickups">
+      <UniqueIdentifier>{F4B21D16-61E4-3ABB-A36B-04E53E03AB5E}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Pickups\SHAmmoPickup.h">
+      <Filter>Source\Shooter\Public\Pickups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Pickups\SHBasePickup.h">
+      <Filter>Source\Shooter\Public\Pickups</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Pickups\SHHealthPickup.h">
+      <Filter>Source\Shooter\Public\Pickups</Filter>
+    </ClInclude>
     <Filter Include="Source\Shooter\Public\Player">
       <UniqueIdentifier>{4918A0D8-611B-3F7D-9A24-C43143BCEC92}</UniqueIdentifier>
     </Filter>
@@ -147,6 +204,9 @@
       <UniqueIdentifier>{A9EDB530-4261-344C-830D-C4F09E659E69}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Shooter\Public\UI\SHGameHUD.h">
+      <Filter>Source\Shooter\Public\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\UI\SHPlayerHUDWidget.h">
       <Filter>Source\Shooter\Public\UI</Filter>
     </ClInclude>
     <Filter Include="Source\Shooter\Public\Weapon">

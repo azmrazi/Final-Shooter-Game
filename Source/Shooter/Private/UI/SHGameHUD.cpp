@@ -3,12 +3,20 @@
 
 #include "UI/SHGameHUD.h"
 #include "Engine/Canvas.h"
+#include "Blueprint/UserWidget.h"
 
 void ASHGameHUD::DrawHUD()
 {
 	Super::DrawHUD();
 
-	DrawCrossHair();
+	//DrawCrossHair();
+}
+
+void ASHGameHUD::BeginPlay()
+{
+	Super::BeginPlay();
+
+
 }
 
 void ASHGameHUD::DrawCrossHair()
