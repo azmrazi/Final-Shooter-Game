@@ -183,9 +183,21 @@ bool USHWeaponComponent::CanReload() const
 	return CurrentWeapon && !EquipAnimInProgress && !ReloadAnimInProgress && CurrentWeapon->CanReload();
 }
 
-void USHWeaponComponent::OnEmptyClip()
+void USHWeaponComponent::OnEmptyClip(ASHBaseWeapon* AmmoEmptyWeapon)
 {
-	ChangeClip();
+	if (!AmmoEmptyWeapon) return;
+
+	if (CurrentWeapon == AmmoEmptyWeapon)
+	{
+		ChangeClip();
+	}
+	else
+	{
+		for (const auto Weapon : Weapons)
+		{
+			Weapon->ChangeClip();
+		}
+	}
 }
 
 void USHWeaponComponent::ChangeClip()
@@ -219,6 +231,18 @@ bool USHWeaponComponent::GetWeaponAmmoData(FAmmoData& AmmoData) const
 	{
 		AmmoData = CurrentWeapon->GetAmmoData();
 		return true;
+	}
+	return false;
+}
+
+bool USHWeaponComponent::TryToAddAmmo(TSubclassOf<ASHBaseWeapon> WeaponType, int32 ClipsAmount)
+{
+	for (const auto Weapon : Weapons)
+	{
+		if (Weapon && Weapon->IsA(WeaponType))
+		{
+			return Weapon->TryToAddAmmo(ClipsAmount);
+		}
 	}
 	return false;
 }

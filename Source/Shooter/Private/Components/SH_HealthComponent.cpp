@@ -23,6 +23,13 @@ bool USH_HealthComponent::IsPlayerSpectating() const
 	return Controller && Controller->GetStateName() == NAME_Spectating;
 
 }
+bool USH_HealthComponent::TryToAddHealth(float HealthAmount)
+{
+	if (IsHealthFull()) return false;
+
+	SetHealth(Health + HealthAmount);
+	return true;
+}
 // Called when the game starts
 void USH_HealthComponent::BeginPlay()
 {
@@ -37,6 +44,11 @@ void USH_HealthComponent::BeginPlay()
 	{
 		ComponentOwner->OnTakeAnyDamage.AddDynamic(this, &USH_HealthComponent::OnTakeAnyDamage);
 	}
+}
+
+bool USH_HealthComponent::IsHealthFull() const
+{
+	return FMath::IsNearlyEqual(Health, MaxHealth);
 }
 
 void USH_HealthComponent::OnTakeAnyDamage(AActor* DamageActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser) {

@@ -225,4 +225,9 @@
       <Filter>Source\Shooter\Public\Weapon</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SHUtils.h">
+      <Filter>Source\Shooter\Public</Filter>
+    </ClInclude>
+  </ItemGroup>
 </Project>

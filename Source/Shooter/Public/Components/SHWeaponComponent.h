@@ -31,6 +31,9 @@ public:
 	
 	UFUNCTION(BlueprintCallable, Category = "UI")
 	bool GetWeaponAmmoData(FAmmoData& AmmoData) const;
+
+	bool TryToAddAmmo(TSubclassOf<ASHBaseWeapon> WeaponType, int32 ClipsAmount);
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -75,7 +78,7 @@ private:
 	bool CanEquip() const;
 	bool CanReload() const;
 
-	void OnEmptyClip();
+	void OnEmptyClip(ASHBaseWeapon* AmmoEmptyWeapon);
 	void ChangeClip();
 
 };

@@ -24,7 +24,7 @@ ASH_BaseCharacter::ASH_BaseCharacter()
 	SpringArmComponent->SetupAttachment(GetRootComponent());
 	SpringArmComponent->bUsePawnControlRotation = true;
 
-	CameraComponent = CreateAbstractDefaultSubobject<UCameraComponent>("CameraComponent");
+	CameraComponent = CreateDefaultSubobject<UCameraComponent>("CameraComponent");
 	CameraComponent->SetupAttachment(SpringArmComponent);	
 
 	HealthComponent = CreateDefaultSubobject<USH_HealthComponent>("HealthComponent");

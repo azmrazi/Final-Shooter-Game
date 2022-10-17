@@ -1,24 +1,29 @@
 ﻿  Using bundled DotNet SDK
   Log file: C:\Users\azmr2\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (C:\Games\Shooter 5.0 - 2).
-  Creating makefile for ShooterEditor (no existing makefile)
+  Invalidating makefile for ShooterEditor (working set of source files changed)
   Parsing headers for ShooterEditor
     Running UnrealHeaderTool "C:\Games\Shooter 5.0 - 2\Shooter.uproject" "C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\ShooterEditor\Development\ShooterEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\azmr2\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for ShooterEditor in 5,4631737 seconds
+  Reflection code generated for ShooterEditor in 7,7243766 seconds
   Building ShooterEditor...
   Using Visual Studio 2022 14.33.31630 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  [Adaptive Build] Excluded from Shooter unity file: SHAnimNotify.cpp, SHEquipFinishedAnimNotify.cpp, SHReloadFinishedAnimNotify.cpp, SHWeaponComponent.cpp, SH_HealthComponent.cpp, SHAmmoPickup.cpp, SHBasePickup.cpp, SH_BaseCharacter.cpp, SHGameHUD.cpp, SHPlayerHUDWidget.cpp, SHBaseWeapon.cpp, SHLauncherWeapon.cpp, SHProjectTile.cpp, SHRifleWeapon.cpp
+  [Adaptive Build] Excluded from Shooter unity file: SHWeaponComponent.cpp, SH_HealthComponent.cpp, SHAmmoPickup.cpp, SHBasePickup.cpp, SHHealthPickup.cpp, SH_BaseCharacter.cpp, SHBaseWeapon.cpp
   Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
     Executing up to 8 processes, one per physical core
-    Requested 1,5 GB free memory per action, 1,57 GB available: limiting max parallel actions to 1
-  Building 6 actions with 1 process...
-  [1/6] Compile SHAmmoPickup.gen.cpp
-  [2/6] Compile Shooter.init.gen.cpp
-  [3/6] Compile SHAmmoPickup.cpp
-  [4/6] Link UnrealEditor-Shooter.lib
+    Requested 1,5 GB free memory per action, 1,02 GB available: limiting max parallel actions to 1
+  Building 11 actions with 1 process...
+  [1/11] Compile SH_HealthComponent.cpp
+  [2/11] Compile SHAmmoPickup.gen.cpp
+  [3/11] Compile SHAmmoPickup.cpp
+  [4/11] Compile SHHealthPickup.cpp
+  [5/11] Compile SH_BaseCharacter.cpp
+  [6/11] Compile SHBasePickup.cpp
+  [7/11] Compile SHBasePickup.gen.cpp
+  [8/11] Compile SHHealthPickup.gen.cpp
+  [9/11] Link UnrealEditor-Shooter.lib
      Создается библиотека C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.lib и объект C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.exp
-  [5/6] Link UnrealEditor-Shooter.dll
+  [10/11] Link UnrealEditor-Shooter.dll
      Создается библиотека C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.suppressed.lib и объект C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.suppressed.exp
-  [6/6] WriteMetadata ShooterEditor.target
-  Total time in Parallel executor: 25,11 seconds
-  Total execution time: 32,84 seconds
+  [11/11] WriteMetadata ShooterEditor.target
+  Total time in Parallel executor: 104,34 seconds
+  Total execution time: 117,16 seconds

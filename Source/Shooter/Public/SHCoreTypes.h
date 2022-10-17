@@ -6,7 +6,7 @@
 
 class ASHBaseWeapon;
 
-DECLARE_MULTICAST_DELEGATE(FOnClipEmptySignature);
+DECLARE_MULTICAST_DELEGATE_OneParam(FOnClipEmptySignature, ASHBaseWeapon*);
 
 
 USTRUCT(BlueprintType)

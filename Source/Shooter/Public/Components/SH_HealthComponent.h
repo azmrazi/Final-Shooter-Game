@@ -31,6 +31,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "UI")
 	bool IsPlayerSpectating() const;
 
+	bool TryToAddHealth(float HealthAmount);
+
 	FOnDeath OnDeath;
 	FOnHealthChanged OnHealthChanged;
 protected:
@@ -51,6 +53,8 @@ protected:
 	float HealModifier = 5.0f;
 
 	virtual void BeginPlay() override;
+
+	bool IsHealthFull() const;
 
 
 private:
