@@ -8,6 +8,7 @@
 
 class USphereComponent;
 class UProjectileMovementComponent;
+class USHWeaponVFXComponent;
 
 UCLASS()
 class SHOOTER_API ASHProjectTile : public AActor
@@ -38,6 +39,9 @@ protected:
 
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
 		float LifeSeconds = 5.0f;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "VFX")
+	USHWeaponVFXComponent* WeaponVFXComponent;
 
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

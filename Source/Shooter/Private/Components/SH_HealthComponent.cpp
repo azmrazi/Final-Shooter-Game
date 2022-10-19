@@ -5,6 +5,9 @@
 #include "GameFramework/Actor.h"
 #include "Engine/World.h"
 #include "Kismet/GameplayStatics.h"
+#include "GameFramework/Pawn.h"
+#include "GameFramework/Controller.h"
+#include "Camera/CameraShakeBase.h"
 #include "TimerManager.h"
 
 
@@ -56,7 +59,7 @@ void USH_HealthComponent::OnTakeAnyDamage(AActor* DamageActor, float Damage, con
 	if (Damage <= 0.0f || IsDead() || !GetWorld()) return;
 
 	SetHealth(Health - Damage);
-	OnHealthChanged.Broadcast(Health);
+	GetWorld()->GetTimerManager().ClearTimer(HealTimerHandle);
 
 	if (IsDead())
 	{
@@ -66,12 +69,12 @@ void USH_HealthComponent::OnTakeAnyDamage(AActor* DamageActor, float Damage, con
 	{
 		GetWorld()->GetTimerManager().SetTimer(HealTimerHandle, this, &USH_HealthComponent::HealUptade, HealUpdateTime, true, HealDelay);
 	}
+	PlayCameraShake();
 }
 
 void USH_HealthComponent::HealUptade()
 {
 	SetHealth(Health + HealModifier);
-	OnHealthChanged.Broadcast(Health);
 
 	if (FMath::IsNearlyEqual(Health, MaxHealth) && GetWorld())
 	{
@@ -81,6 +84,22 @@ void USH_HealthComponent::HealUptade()
 
 void USH_HealthComponent::SetHealth(float NewHealth)
 {
-	Health = FMath::Clamp(NewHealth, 0.0f, MaxHealth);
-	OnHealthChanged.Broadcast(Health);
+	const auto NextHealth = FMath::Clamp(NewHealth, 0.0f, MaxHealth);
+	const auto HealthDelta = NextHealth - Health;
+
+	Health = NextHealth;
+	OnHealthChanged.Broadcast(Health, HealthDelta);
+}
+
+void USH_HealthComponent::PlayCameraShake()
+{
+	if (IsDead()) return;
+
+	const auto Player = Cast<APawn>(GetOwner());
+	if (!Player) return;
+
+	const auto Controller = Player->GetController<APlayerController>();
+	if (!Controller || !Controller->PlayerCameraManager) return;
+
+	Controller->PlayerCameraManager->StartCameraShake(CameraShake);
 }

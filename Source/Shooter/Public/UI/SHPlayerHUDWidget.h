@@ -16,4 +16,10 @@ class SHOOTER_API USHPlayerHUDWidget : public UUserWidget
 	
 public:
 	
+	void OnHealthChanged(float Health, float HealthDelta);
+
+	virtual bool Initialize() override;
+
+	UFUNCTION(BlueprintImplementableEvent, Category = "UI")
+	void OnTakeDamage();
 };

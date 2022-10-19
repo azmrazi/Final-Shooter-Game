@@ -16,18 +16,18 @@ struct FHitResult;
 #endif
 #define SHOOTER_SHProjectTile_generated_h
 
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_SPARSE_DATA
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_RPC_WRAPPERS \
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_SPARSE_DATA
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execOnProjectileHit);
 
 
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execOnProjectileHit);
 
 
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesASHProjectTile(); \
 	friend struct Z_Construct_UClass_ASHProjectTile_Statics; \
@@ -36,7 +36,7 @@ public: \
 	DECLARE_SERIALIZER(ASHProjectTile)
 
 
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_INCLASS \
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesASHProjectTile(); \
 	friend struct Z_Construct_UClass_ASHProjectTile_Statics; \
@@ -45,7 +45,7 @@ public: \
 	DECLARE_SERIALIZER(ASHProjectTile)
 
 
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_STANDARD_CONSTRUCTORS \
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API ASHProjectTile(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASHProjectTile) \
@@ -58,7 +58,7 @@ private: \
 public:
 
 
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ASHProjectTile(ASHProjectTile&&); \
@@ -69,25 +69,25 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASHProjectTile)
 
 
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_12_PROLOG
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_GENERATED_BODY_LEGACY \
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_13_PROLOG
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_SPARSE_DATA \
-	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_RPC_WRAPPERS \
-	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_INCLASS \
-	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_STANDARD_CONSTRUCTORS \
+	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_SPARSE_DATA \
+	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_RPC_WRAPPERS \
+	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_INCLASS \
+	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_GENERATED_BODY \
+#define FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_SPARSE_DATA \
-	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_SPARSE_DATA \
+	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_INCLASS_NO_PURE_DECLS \
+	FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -134,6 +134,15 @@
     <ClCompile Include="..\..\Source\Shooter\Private\Weapon\SHRifleWeapon.cpp">
       <Filter>Source\Shooter\Private\Weapon</Filter>
     </ClCompile>
+    <Filter Include="Source\Shooter\Private\Weapon\Components">
+      <UniqueIdentifier>{C3DBE72B-0225-32F4-ABF4-34AF19668AF3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Weapon\Components\SHWeaponFXComponent.cpp">
+      <Filter>Source\Shooter\Private\Weapon\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Weapon\Components\SHWeaponVFXComponent.cpp">
+      <Filter>Source\Shooter\Private\Weapon\Components</Filter>
+    </ClCompile>
     <Filter Include="Source\Shooter\Public">
       <UniqueIdentifier>{33A9E0AA-DBE0-3191-9D2D-6DB4A98D9D6E}</UniqueIdentifier>
     </Filter>
@@ -224,9 +233,18 @@
     <ClInclude Include="..\..\Source\Shooter\Public\Weapon\SHRifleWeapon.h">
       <Filter>Source\Shooter\Public\Weapon</Filter>
     </ClInclude>
+    <Filter Include="Source\Shooter\Public\Weapon\Components">
+      <UniqueIdentifier>{9BD480D9-F89B-3976-8127-837341DCE9B3}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Components\SHWeaponFXComponent.h">
+      <Filter>Source\Shooter\Public\Weapon\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Components\SHWeaponVFXComponent.h">
+      <Filter>Source\Shooter\Public\Weapon\Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SHUtils.h">
+    <ClInclude Include="SHHUtils.h">
       <Filter>Source\Shooter\Public</Filter>
     </ClInclude>
   </ItemGroup>

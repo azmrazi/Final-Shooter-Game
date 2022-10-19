@@ -6,6 +6,7 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "DrawDebugHelpers.h"
 #include "Kismet/GameplayStatics.h"
+#include "Weapon/Components/SHWeaponVFXComponent.h"
 
 // Sets default values
 ASHProjectTile::ASHProjectTile()
@@ -17,9 +18,11 @@ ASHProjectTile::ASHProjectTile()
 	CollisionComponent->InitSphereRadius(5.0f);
 	CollisionComponent->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 	CollisionComponent->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
+	CollisionComponent->bReturnMaterialOnMove = true;
 	SetRootComponent(CollisionComponent);
 
 	MovementComponent = CreateDefaultSubobject<UProjectileMovementComponent>("ProjectileMovementComponent");
+	WeaponVFXComponent = CreateDefaultSubobject<USHWeaponVFXComponent>("WeaponFXComponent");
 }
 
 // Called when the game starts or when spawned
@@ -29,6 +32,7 @@ void ASHProjectTile::BeginPlay()
 	
 	check(MovementComponent);
 	check(CollisionComponent);
+	check(WeaponVFXComponent);
 	MovementComponent->Velocity = ShotDirection * MovementComponent->InitialSpeed;
 
 	CollisionComponent->OnComponentHit.AddDynamic(this, &ASHProjectTile::OnProjectileHit);
@@ -46,8 +50,8 @@ void ASHProjectTile::OnProjectileHit(UPrimitiveComponent* HitComponent, AActor* 
 	// make damage
 	UGameplayStatics::ApplyRadialDamage(GetWorld(), DamageAmount, GetActorLocation(), DamageRadius, UDamageType::StaticClass(), {GetOwner()}, this, GetController(), DoFullDamage);
 
-	DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 24, FColor::Red, false, 5.0f);
-
+	//DrawDebugSphere(GetWorld(), GetActorLocation(), DamageRadius, 24, FColor::Red, false, 5.0f);
+	WeaponVFXComponent->PlayImpactFX(Hit);
 	Destroy();
 }
 

@@ -8,6 +8,8 @@
 #include "Blueprint/UserWidget.h"
 #include "SH_HealthComponent.generated.h"
 
+class UCameraShakeBase;
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class SHOOTER_API USH_HealthComponent : public UActorComponent
 {
@@ -52,6 +54,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Heal")
 	float HealModifier = 5.0f;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "VFX")
+	TSubclassOf<UCameraShakeBase> CameraShake;
+
 	virtual void BeginPlay() override;
 
 	bool IsHealthFull() const;
@@ -62,10 +67,13 @@ private:
 
 	FTimerHandle HealTimerHandle;
 
-	UFUNCTION()
-		void OnTakeAnyDamage(AActor* DamageActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
+	UFUNCTION(BlueprintCallable, Category = "UI")
+	void OnTakeAnyDamage(AActor* DamageActor, float Damage, const class UDamageType* DamageType, class AController* InstigatedBy, AActor* DamageCauser);
 
 	void HealUptade();
 	void SetHealth(float NewHealth);
+
+	void PlayCameraShake();
+
 
 };

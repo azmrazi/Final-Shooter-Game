@@ -32,5 +32,6 @@ void ASHLauncherWeapon::MakeShot()
 		Projectile->FinishSpawning(SpawnTransform);
 	}
 	DecreaseAmmo();
+	SpawnMuzzleFX();
 }
 

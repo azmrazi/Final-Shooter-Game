@@ -7,6 +7,8 @@
         "Includes": [
             "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\unrealeditor\\development\\shooter\\definitions.shooter.h",
             "c:\\games\\shooter 5.0 - 2\\source\\shooter\\public\\animations\\shequipfinishedanimnotify.h",
+            "c:\\games\\shooter 5.0 - 2\\source\\shooter\\public\\animations\\shanimnotify.h",
+            "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\shanimnotify.generated.h",
             "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\shequipfinishedanimnotify.generated.h"
         ],
         "ImportedModules": [],

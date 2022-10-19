@@ -3,10 +3,25 @@
 
 #include "Weapon/SHRifleWeapon.h"
 #include "DrawDebugHelpers.h"
+#include "Weapon/Components/SHWeaponVFXComponent.h"
+#include "C:\Program Files\Epic Games\UE_5.0\Engine\Plugins\FX\Niagara\Source\Niagara\Public\NiagaraComponent.h"
+#include "C:\Program Files\Epic Games\UE_5.0\Engine\Plugins\FX\Niagara\Source\Niagara\Public\NiagaraFunctionLibrary.h"
 
 
+ASHRifleWeapon::ASHRifleWeapon()
+{
+	WeaponVFXComponent = CreateDefaultSubobject<USHWeaponVFXComponent>("WeaponFXComponent");
+
+}
+
+void ASHRifleWeapon::BeginPlay()
+{
+	Super::BeginPlay();
+	check(WeaponVFXComponent);
+}
 void ASHRifleWeapon::StartFire()
 {
+	InitMuzzleFX();
 	GetWorldTimerManager().SetTimer(ShotTimerHandle, this, &ASHRifleWeapon::MakeShot, TimeBetweenShots, true);
 	MakeShot();
 }
@@ -14,6 +29,7 @@ void ASHRifleWeapon::StartFire()
 void ASHRifleWeapon::StopFire()
 {
 	GetWorldTimerManager().ClearTimer(ShotTimerHandle);
+	SetMuzzleFXVisibility(false);
 }
 
 void ASHRifleWeapon::MakeShot()
@@ -34,18 +50,16 @@ void ASHRifleWeapon::MakeShot()
 	FHitResult HitResult;
 	MakeHit(HitResult, TraceStart, TraceEnd);
 
+
+	FVector TraceFXEnd = TraceEnd;
 	if (HitResult.bBlockingHit)
 	{
+		TraceFXEnd = HitResult.ImpactPoint;
 		MakeDamage(HitResult);
-		DrawDebugLine(GetWorld(), GetMuzzleWorldLocation(), HitResult.ImpactPoint, FColor::Red, false, 3.0f, 0, 3.0f);
-		DrawDebugSphere(GetWorld(), HitResult.ImpactPoint, 10.0f, 24, FColor::Red, false, 5.0f);
+		WeaponVFXComponent->PlayImpactFX(HitResult);
 
 	}
-	else
-	{
-		DrawDebugLine(GetWorld(), GetMuzzleWorldLocation(), TraceEnd, FColor::Red, false, 3.0f, 0, 3.0f);
-	}
-
+	SpawnTraceFX(GetMuzzleWorldLocation(), TraceFXEnd);
 	DecreaseAmmo();
 }
 
@@ -62,10 +76,39 @@ bool ASHRifleWeapon::GetTraceData(FVector& TraceStart, FVector& TraceEnd) const
 	return true;
 }
 
+
 void ASHRifleWeapon::MakeDamage(const FHitResult& HitResult)
 {
 	const auto DamagedActor = HitResult.GetActor();
 	if (!DamagedActor) return;
 
 	DamagedActor->TakeDamage(DamageAmount, FDamageEvent(), GetPlayerController(), this);
+}
+
+void ASHRifleWeapon::InitMuzzleFX()
+{
+	if (!MuzzleFXComponent)
+	{
+		MuzzleFXComponent = SpawnMuzzleFX();
+	}
+	SetMuzzleFXVisibility(true);
+}
+
+
+void ASHRifleWeapon::SetMuzzleFXVisibility(bool Visible)
+{
+	if (MuzzleFXComponent)
+	{
+		MuzzleFXComponent->SetPaused(!Visible);
+		MuzzleFXComponent->SetVisibility(Visible, true);
+	}
+}
+
+void ASHRifleWeapon::SpawnTraceFX(const FVector& TraceStart, const FVector& TraceEnd)
+{
+	const auto TraceFXComponent = UNiagaraFunctionLibrary::SpawnSystemAtLocation(GetWorld(), TraceFX, TraceStart);
+	if (TraceFXComponent)
+	{
+		TraceFXComponent->SetNiagaraVariableVec3(TraceTargetName, TraceEnd);
+	}
 }

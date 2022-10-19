@@ -62,6 +62,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Movement")
 		float GetMovementDirection() const;
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "UI")
+	void IsTakingDamageOne();
+
 private:
 	void MoveForward(float Amount);
 	void MoveRight(float Amount);
@@ -69,7 +72,7 @@ private:
 	void StopRunning();
 
 	void OnDeath();
-	void OnHealthChanged(float Health);
+	void OnHealthChanged(float Health, float HealthDelta);
 
 	UFUNCTION()
 	void OnGroundLanded(const FHitResult& Hit);

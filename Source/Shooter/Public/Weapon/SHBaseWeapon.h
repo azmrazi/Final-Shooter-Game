@@ -9,6 +9,8 @@
 
 
 class USkeletalMeshComponent;
+class UNiagaraSystem;
+class UNiagaraComponent;
 
 UCLASS()
 class SHOOTER_API ASHBaseWeapon : public AActor
@@ -46,11 +48,13 @@ protected:
 		float TraceMaxDistance = 1500.0f;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Weapon")
-		FAmmoData DefaultAmmo {15, 10, false};
+	FAmmoData DefaultAmmo {15, 10, false};
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "UI")
 	FWeaponUIData UIData;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "VFX")
+	UNiagaraSystem* MuzzleFX;
 
 	virtual void BeginPlay() override;
 
@@ -75,6 +79,8 @@ protected:
 	void LogAmmo();
 
 	bool IsAmmoFull() const;
+
+	UNiagaraComponent* SpawnMuzzleFX();
 
 private:
 

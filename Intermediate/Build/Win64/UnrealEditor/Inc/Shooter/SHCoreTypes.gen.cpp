@@ -17,6 +17,11 @@ void EmptyLinkFunctionForGeneratedCodeSHCoreTypes() {}
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponUIData();
 	ENGINE_API UClass* Z_Construct_UClass_UTexture2D_NoRegister();
+	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FDecalData();
+	ENGINE_API UClass* Z_Construct_UClass_UMaterialInterface_NoRegister();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
+	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FImpactData();
+	NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 // End Cross Module References
 	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_AmmoData;
 class UScriptStruct* FAmmoData::StaticStruct()
@@ -273,6 +278,188 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<FWeaponUIData>()
 		}
 		return Z_Registration_Info_UScriptStruct_WeaponUIData.InnerSingleton;
 	}
+	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_DecalData;
+class UScriptStruct* FDecalData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_DecalData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_DecalData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FDecalData, Z_Construct_UPackage__Script_Shooter(), TEXT("DecalData"));
+	}
+	return Z_Registration_Info_UScriptStruct_DecalData.OuterSingleton;
+}
+template<> SHOOTER_API UScriptStruct* StaticStruct<FDecalData>()
+{
+	return FDecalData::StaticStruct();
+}
+	struct Z_Construct_UScriptStruct_FDecalData_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Material_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_Material;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Size_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_Size;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_LifeTime_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_LifeTime;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_FadeOutTime_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_FadeOutTime;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FDecalData_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/SHCoreTypes.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FDecalData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FDecalData>();
+	}
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_Material_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "ModuleRelativePath", "Public/SHCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_Material = { "Material", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FDecalData, Material), Z_Construct_UClass_UMaterialInterface_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_Material_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_Material_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_Size_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "ModuleRelativePath", "Public/SHCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_Size = { "Size", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FDecalData, Size), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_Size_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_Size_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_LifeTime_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "ModuleRelativePath", "Public/SHCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_LifeTime = { "LifeTime", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FDecalData, LifeTime), METADATA_PARAMS(Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_LifeTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_LifeTime_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_FadeOutTime_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "ModuleRelativePath", "Public/SHCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_FadeOutTime = { "FadeOutTime", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FDecalData, FadeOutTime), METADATA_PARAMS(Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_FadeOutTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_FadeOutTime_MetaData)) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FDecalData_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_Material,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_Size,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_LifeTime,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FDecalData_Statics::NewProp_FadeOutTime,
+	};
+	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FDecalData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_Shooter,
+		nullptr,
+		&NewStructOps,
+		"DecalData",
+		sizeof(FDecalData),
+		alignof(FDecalData),
+		Z_Construct_UScriptStruct_FDecalData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FDecalData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FDecalData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FDecalData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FDecalData()
+	{
+		if (!Z_Registration_Info_UScriptStruct_DecalData.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_DecalData.InnerSingleton, Z_Construct_UScriptStruct_FDecalData_Statics::ReturnStructParams);
+		}
+		return Z_Registration_Info_UScriptStruct_DecalData.InnerSingleton;
+	}
+	static FStructRegistrationInfo Z_Registration_Info_UScriptStruct_ImpactData;
+class UScriptStruct* FImpactData::StaticStruct()
+{
+	if (!Z_Registration_Info_UScriptStruct_ImpactData.OuterSingleton)
+	{
+		Z_Registration_Info_UScriptStruct_ImpactData.OuterSingleton = GetStaticStruct(Z_Construct_UScriptStruct_FImpactData, Z_Construct_UPackage__Script_Shooter(), TEXT("ImpactData"));
+	}
+	return Z_Registration_Info_UScriptStruct_ImpactData.OuterSingleton;
+}
+template<> SHOOTER_API UScriptStruct* StaticStruct<FImpactData>()
+{
+	return FImpactData::StaticStruct();
+}
+	struct Z_Construct_UScriptStruct_FImpactData_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_NiagaraEffect_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_NiagaraEffect;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DecalData_MetaData[];
+#endif
+		static const UECodeGen_Private::FStructPropertyParams NewProp_DecalData;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UECodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FImpactData_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Public/SHCoreTypes.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FImpactData_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FImpactData>();
+	}
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FImpactData_Statics::NewProp_NiagaraEffect_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "ModuleRelativePath", "Public/SHCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FImpactData_Statics::NewProp_NiagaraEffect = { "NiagaraEffect", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FImpactData, NiagaraEffect), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FImpactData_Statics::NewProp_NiagaraEffect_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FImpactData_Statics::NewProp_NiagaraEffect_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FImpactData_Statics::NewProp_DecalData_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "ModuleRelativePath", "Public/SHCoreTypes.h" },
+	};
+#endif
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FImpactData_Statics::NewProp_DecalData = { "DecalData", nullptr, (EPropertyFlags)0x0010000000010005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FImpactData, DecalData), Z_Construct_UScriptStruct_FDecalData, METADATA_PARAMS(Z_Construct_UScriptStruct_FImpactData_Statics::NewProp_DecalData_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FImpactData_Statics::NewProp_DecalData_MetaData)) }; // 1798495222
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FImpactData_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FImpactData_Statics::NewProp_NiagaraEffect,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FImpactData_Statics::NewProp_DecalData,
+	};
+	const UECodeGen_Private::FStructParams Z_Construct_UScriptStruct_FImpactData_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_Shooter,
+		nullptr,
+		&NewStructOps,
+		"ImpactData",
+		sizeof(FImpactData),
+		alignof(FImpactData),
+		Z_Construct_UScriptStruct_FImpactData_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FImpactData_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FImpactData_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FImpactData_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FImpactData()
+	{
+		if (!Z_Registration_Info_UScriptStruct_ImpactData.InnerSingleton)
+		{
+			UECodeGen_Private::ConstructUScriptStruct(Z_Registration_Info_UScriptStruct_ImpactData.InnerSingleton, Z_Construct_UScriptStruct_FImpactData_Statics::ReturnStructParams);
+		}
+		return Z_Registration_Info_UScriptStruct_ImpactData.InnerSingleton;
+	}
 	struct Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_SHCoreTypes_h_Statics
 	{
 		static const FStructRegisterCompiledInInfo ScriptStructInfo[];
@@ -281,8 +468,10 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<FWeaponUIData>()
 		{ FAmmoData::StaticStruct, Z_Construct_UScriptStruct_FAmmoData_Statics::NewStructOps, TEXT("AmmoData"), &Z_Registration_Info_UScriptStruct_AmmoData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FAmmoData), 2560505190U) },
 		{ FWeaponData::StaticStruct, Z_Construct_UScriptStruct_FWeaponData_Statics::NewStructOps, TEXT("WeaponData"), &Z_Registration_Info_UScriptStruct_WeaponData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWeaponData), 863554647U) },
 		{ FWeaponUIData::StaticStruct, Z_Construct_UScriptStruct_FWeaponUIData_Statics::NewStructOps, TEXT("WeaponUIData"), &Z_Registration_Info_UScriptStruct_WeaponUIData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FWeaponUIData), 3634516111U) },
+		{ FDecalData::StaticStruct, Z_Construct_UScriptStruct_FDecalData_Statics::NewStructOps, TEXT("DecalData"), &Z_Registration_Info_UScriptStruct_DecalData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FDecalData), 1798495222U) },
+		{ FImpactData::StaticStruct, Z_Construct_UScriptStruct_FImpactData_Statics::NewStructOps, TEXT("ImpactData"), &Z_Registration_Info_UScriptStruct_ImpactData, CONSTRUCT_RELOAD_VERSION_INFO(FStructReloadVersionInfo, sizeof(FImpactData), 3499948109U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_SHCoreTypes_h_104845707(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_SHCoreTypes_h_3377325115(TEXT("/Script/Shooter"),
 		nullptr, 0,
 		Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_SHCoreTypes_h_Statics::ScriptStructInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_SHCoreTypes_h_Statics::ScriptStructInfo),
 		nullptr, 0);

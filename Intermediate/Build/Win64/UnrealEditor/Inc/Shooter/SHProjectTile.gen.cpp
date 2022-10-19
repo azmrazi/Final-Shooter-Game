@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeSHProjectTile() {}
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 	ENGINE_API UClass* Z_Construct_UClass_USphereComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
+	SHOOTER_API UClass* Z_Construct_UClass_USHWeaponVFXComponent_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ASHProjectTile::execOnProjectileHit)
 	{
@@ -149,6 +150,10 @@ void EmptyLinkFunctionForGeneratedCodeSHProjectTile() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_LifeSeconds_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_LifeSeconds;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_WeaponVFXComponent_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_WeaponVFXComponent;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -214,6 +219,14 @@ void EmptyLinkFunctionForGeneratedCodeSHProjectTile() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASHProjectTile_Statics::NewProp_LifeSeconds = { "LifeSeconds", nullptr, (EPropertyFlags)0x0020080000030005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASHProjectTile, LifeSeconds), METADATA_PARAMS(Z_Construct_UClass_ASHProjectTile_Statics::NewProp_LifeSeconds_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASHProjectTile_Statics::NewProp_LifeSeconds_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASHProjectTile_Statics::NewProp_WeaponVFXComponent_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/Weapon/SHProjectTile.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASHProjectTile_Statics::NewProp_WeaponVFXComponent = { "WeaponVFXComponent", nullptr, (EPropertyFlags)0x00200800000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASHProjectTile, WeaponVFXComponent), Z_Construct_UClass_USHWeaponVFXComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASHProjectTile_Statics::NewProp_WeaponVFXComponent_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASHProjectTile_Statics::NewProp_WeaponVFXComponent_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASHProjectTile_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHProjectTile_Statics::NewProp_CollisionComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHProjectTile_Statics::NewProp_MovementComponent,
@@ -221,6 +234,7 @@ void EmptyLinkFunctionForGeneratedCodeSHProjectTile() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHProjectTile_Statics::NewProp_DamageAmount,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHProjectTile_Statics::NewProp_DoFullDamage,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHProjectTile_Statics::NewProp_LifeSeconds,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHProjectTile_Statics::NewProp_WeaponVFXComponent,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASHProjectTile_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASHProjectTile>::IsAbstract,
@@ -258,9 +272,9 @@ void EmptyLinkFunctionForGeneratedCodeSHProjectTile() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASHProjectTile, ASHProjectTile::StaticClass, TEXT("ASHProjectTile"), &Z_Registration_Info_UClass_ASHProjectTile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASHProjectTile), 3463466848U) },
+		{ Z_Construct_UClass_ASHProjectTile, ASHProjectTile::StaticClass, TEXT("ASHProjectTile"), &Z_Registration_Info_UClass_ASHProjectTile, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASHProjectTile), 1851637506U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_2670180495(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_3289777231(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHProjectTile_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

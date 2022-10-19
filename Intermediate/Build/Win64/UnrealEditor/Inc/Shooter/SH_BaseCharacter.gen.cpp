@@ -37,6 +37,11 @@ void EmptyLinkFunctionForGeneratedCodeSH_BaseCharacter() {}
 		*(float*)Z_Param__Result=P_THIS->GetMovementDirection();
 		P_NATIVE_END;
 	}
+	static FName NAME_ASH_BaseCharacter_IsTakingDamageOne = FName(TEXT("IsTakingDamageOne"));
+	void ASH_BaseCharacter::IsTakingDamageOne()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ASH_BaseCharacter_IsTakingDamageOne),NULL);
+	}
 	void ASH_BaseCharacter::StaticRegisterNativesASH_BaseCharacter()
 	{
 		UClass* Class = ASH_BaseCharacter::StaticClass();
@@ -76,6 +81,29 @@ void EmptyLinkFunctionForGeneratedCodeSH_BaseCharacter() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASH_BaseCharacter_GetMovementDirection_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ASH_BaseCharacter_IsTakingDamageOne_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ASH_BaseCharacter_IsTakingDamageOne_Statics::Function_MetaDataParams[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Public/Player/SH_BaseCharacter.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASH_BaseCharacter_IsTakingDamageOne_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASH_BaseCharacter, nullptr, "IsTakingDamageOne", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x08020800, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ASH_BaseCharacter_IsTakingDamageOne_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ASH_BaseCharacter_IsTakingDamageOne_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ASH_BaseCharacter_IsTakingDamageOne()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASH_BaseCharacter_IsTakingDamageOne_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -173,6 +201,7 @@ void EmptyLinkFunctionForGeneratedCodeSH_BaseCharacter() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ASH_BaseCharacter_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ASH_BaseCharacter_GetMovementDirection, "GetMovementDirection" }, // 2091939338
+		{ &Z_Construct_UFunction_ASH_BaseCharacter_IsTakingDamageOne, "IsTakingDamageOne" }, // 2870681059
 		{ &Z_Construct_UFunction_ASH_BaseCharacter_OnGroundLanded, "OnGroundLanded" }, // 2194382891
 	};
 #if WITH_METADATA
@@ -289,9 +318,9 @@ void EmptyLinkFunctionForGeneratedCodeSH_BaseCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASH_BaseCharacter, ASH_BaseCharacter::StaticClass, TEXT("ASH_BaseCharacter"), &Z_Registration_Info_UClass_ASH_BaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASH_BaseCharacter), 103085049U) },
+		{ Z_Construct_UClass_ASH_BaseCharacter, ASH_BaseCharacter::StaticClass, TEXT("ASH_BaseCharacter"), &Z_Registration_Info_UClass_ASH_BaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASH_BaseCharacter), 4005847298U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_4261414606(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_618331057(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

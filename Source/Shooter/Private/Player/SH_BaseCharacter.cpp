@@ -44,8 +44,9 @@ void ASH_BaseCharacter::BeginPlay()
 	check(HealthComponent);
 	check(HealthTextComponent);
 	check(GetCharacterMovement());
+	check(GetMesh());
 	
-	OnHealthChanged(HealthComponent->GetHealth());
+	OnHealthChanged(HealthComponent->GetHealth(), 0.0f);
 	HealthComponent->OnDeath.AddUObject(this, &ASH_BaseCharacter::OnDeath);
 	HealthComponent->OnHealthChanged.AddUObject(this, &ASH_BaseCharacter::OnHealthChanged);
 
@@ -117,7 +118,7 @@ void ASH_BaseCharacter::OnDeath()
 {
 	UE_LOG(BaseCharacterLog, Display, TEXT("Player %s is dead"), *GetName());
 
-	PlayAnimMontage(DeathAnimMontage);
+	//PlayAnimMontage(DeathAnimMontage);
 
 	GetCharacterMovement()->DisableMovement();
 
@@ -128,9 +129,12 @@ void ASH_BaseCharacter::OnDeath()
 	}
 	GetCapsuleComponent()->SetCollisionResponseToChannels(ECollisionResponse::ECR_Ignore);  
 	WeaponComponent->StopFire();
+
+	GetMesh()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	GetMesh()->SetSimulatePhysics(true);
 }
 
-void ASH_BaseCharacter::OnHealthChanged(float Health)
+void ASH_BaseCharacter::OnHealthChanged(float Health, float HealthDelta)
 {
 	HealthTextComponent->SetText(FText::FromString(FString::Printf(TEXT("%.0f"), Health)));
 }

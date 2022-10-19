@@ -16,6 +16,8 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UDamageType_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_AController_NoRegister();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	ENGINE_API UClass* Z_Construct_UClass_UCameraShakeBase_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(USH_HealthComponent::execOnTakeAnyDamage)
 	{
@@ -259,10 +261,11 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::Function_MetaDataParams[] = {
+		{ "Category", "UI" },
 		{ "ModuleRelativePath", "Public/Components/SH_HealthComponent.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USH_HealthComponent, nullptr, "OnTakeAnyDamage", nullptr, nullptr, sizeof(Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::SH_HealthComponent_eventOnTakeAnyDamage_Parms), Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::Function_MetaDataParams)) };
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_USH_HealthComponent, nullptr, "OnTakeAnyDamage", nullptr, nullptr, sizeof(Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::SH_HealthComponent_eventOnTakeAnyDamage_Parms), Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage_Statics::Function_MetaDataParams)) };
 	UFunction* Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage()
 	{
 		static UFunction* ReturnFunction = nullptr;
@@ -305,6 +308,10 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_HealModifier_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_HealModifier;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CameraShake_MetaData[];
+#endif
+		static const UECodeGen_Private::FClassPropertyParams NewProp_CameraShake;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -318,7 +325,7 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 		{ &Z_Construct_UFunction_USH_HealthComponent_IsDead, "IsDead" }, // 3004925552
 		{ &Z_Construct_UFunction_USH_HealthComponent_IsPlayerAlive, "IsPlayerAlive" }, // 2926110874
 		{ &Z_Construct_UFunction_USH_HealthComponent_IsPlayerSpectating, "IsPlayerSpectating" }, // 136137182
-		{ &Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage, "OnTakeAnyDamage" }, // 2446575559
+		{ &Z_Construct_UFunction_USH_HealthComponent_OnTakeAnyDamage, "OnTakeAnyDamage" }, // 1826383594
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USH_HealthComponent_Statics::Class_MetaDataParams[] = {
@@ -371,12 +378,20 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_HealModifier = { "HealModifier", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USH_HealthComponent, HealModifier), METADATA_PARAMS(Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_HealModifier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_HealModifier_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_CameraShake_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "ModuleRelativePath", "Public/Components/SH_HealthComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_CameraShake = { "CameraShake", nullptr, (EPropertyFlags)0x0024080000010005, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USH_HealthComponent, CameraShake), Z_Construct_UClass_UCameraShakeBase_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_CameraShake_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_CameraShake_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_USH_HealthComponent_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_MaxHealth,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_AutoHeal,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_HealUpdateTime,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_HealDelay,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_HealModifier,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USH_HealthComponent_Statics::NewProp_CameraShake,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_USH_HealthComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<USH_HealthComponent>::IsAbstract,
@@ -414,9 +429,9 @@ void EmptyLinkFunctionForGeneratedCodeSH_HealthComponent() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SH_HealthComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_USH_HealthComponent, USH_HealthComponent::StaticClass, TEXT("USH_HealthComponent"), &Z_Registration_Info_UClass_USH_HealthComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USH_HealthComponent), 2196470294U) },
+		{ Z_Construct_UClass_USH_HealthComponent, USH_HealthComponent::StaticClass, TEXT("USH_HealthComponent"), &Z_Registration_Info_UClass_USH_HealthComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USH_HealthComponent), 3394145630U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SH_HealthComponent_h_3291529227(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SH_HealthComponent_h_2915182943(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SH_HealthComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SH_HealthComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

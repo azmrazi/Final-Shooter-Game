@@ -34,6 +34,20 @@ template<> SHOOTER_API UScriptStruct* StaticStruct<struct FWeaponData>();
 
 template<> SHOOTER_API UScriptStruct* StaticStruct<struct FWeaponUIData>();
 
+#define FID_Shooter_5_0___2_Source_Shooter_Public_SHCoreTypes_h_63_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FDecalData_Statics; \
+	SHOOTER_API static class UScriptStruct* StaticStruct();
+
+
+template<> SHOOTER_API UScriptStruct* StaticStruct<struct FDecalData>();
+
+#define FID_Shooter_5_0___2_Source_Shooter_Public_SHCoreTypes_h_83_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FImpactData_Statics; \
+	SHOOTER_API static class UScriptStruct* StaticStruct();
+
+
+template<> SHOOTER_API UScriptStruct* StaticStruct<struct FImpactData>();
+
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID FID_Shooter_5_0___2_Source_Shooter_Public_SHCoreTypes_h
 

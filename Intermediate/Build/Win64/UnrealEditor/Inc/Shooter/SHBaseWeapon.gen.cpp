@@ -16,6 +16,7 @@ void EmptyLinkFunctionForGeneratedCodeSHBaseWeapon() {}
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FAmmoData();
 	SHOOTER_API UScriptStruct* Z_Construct_UScriptStruct_FWeaponUIData();
+	NIAGARA_API UClass* Z_Construct_UClass_UNiagaraSystem_NoRegister();
 // End Cross Module References
 	void ASHBaseWeapon::StaticRegisterNativesASHBaseWeapon()
 	{
@@ -51,6 +52,10 @@ void EmptyLinkFunctionForGeneratedCodeSHBaseWeapon() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_UIData_MetaData[];
 #endif
 		static const UECodeGen_Private::FStructPropertyParams NewProp_UIData;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_MuzzleFX_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_MuzzleFX;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -103,12 +108,20 @@ void EmptyLinkFunctionForGeneratedCodeSHBaseWeapon() {}
 	};
 #endif
 	const UECodeGen_Private::FStructPropertyParams Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_UIData = { "UIData", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASHBaseWeapon, UIData), Z_Construct_UScriptStruct_FWeaponUIData, METADATA_PARAMS(Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_UIData_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_UIData_MetaData)) }; // 3634516111
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_MuzzleFX_MetaData[] = {
+		{ "Category", "VFX" },
+		{ "ModuleRelativePath", "Public/Weapon/SHBaseWeapon.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_MuzzleFX = { "MuzzleFX", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ASHBaseWeapon, MuzzleFX), Z_Construct_UClass_UNiagaraSystem_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_MuzzleFX_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_MuzzleFX_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASHBaseWeapon_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_WeaponMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_MuzzleSocketName,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_TraceMaxDistance,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_DefaultAmmo,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_UIData,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASHBaseWeapon_Statics::NewProp_MuzzleFX,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ASHBaseWeapon_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASHBaseWeapon>::IsAbstract,
@@ -146,9 +159,9 @@ void EmptyLinkFunctionForGeneratedCodeSHBaseWeapon() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHBaseWeapon_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASHBaseWeapon, ASHBaseWeapon::StaticClass, TEXT("ASHBaseWeapon"), &Z_Registration_Info_UClass_ASHBaseWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASHBaseWeapon), 602042451U) },
+		{ Z_Construct_UClass_ASHBaseWeapon, ASHBaseWeapon::StaticClass, TEXT("ASHBaseWeapon"), &Z_Registration_Info_UClass_ASHBaseWeapon, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASHBaseWeapon), 930076811U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHBaseWeapon_h_242728349(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHBaseWeapon_h_2141557798(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHBaseWeapon_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Weapon_SHBaseWeapon_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
