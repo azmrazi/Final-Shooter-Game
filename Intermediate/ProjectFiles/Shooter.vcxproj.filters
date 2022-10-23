@@ -11,6 +11,7 @@
     <None Include="..\..\Source\ShooterEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\WINDOWSERROROUTPUTDEVICE.ipch" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -56,6 +57,51 @@
     <ClCompile Include="..\..\Source\Shooter\Private\SHGameModeBase.cpp">
       <Filter>Source\Shooter\Private</Filter>
     </ClCompile>
+    <Filter Include="Source\Shooter\Private\AI">
+      <UniqueIdentifier>{A09CDA1E-10FB-380B-939B-B874B570B042}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\SHAIController.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\SH_AICharacter.cpp">
+      <Filter>Source\Shooter\Private\AI</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\AI\Decorators">
+      <UniqueIdentifier>{C0E24654-392D-387D-8456-DE846C8CDFB9}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\Decorators\SHAmmoPickupDecorator.cpp">
+      <Filter>Source\Shooter\Private\AI\Decorators</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\Decorators\SHHealthPercentDecorator.cpp">
+      <Filter>Source\Shooter\Private\AI\Decorators</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\AI\EQS">
+      <UniqueIdentifier>{4F57B23A-A1D2-3CE4-927F-D52AD362BB98}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\EQS\EnvQueryTest_PickupCouldBeTaken.cpp">
+      <Filter>Source\Shooter\Private\AI\EQS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\EQS\SHEnemyEnvQueryContext.cpp">
+      <Filter>Source\Shooter\Private\AI\EQS</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\AI\Services">
+      <UniqueIdentifier>{94D57841-8C3B-32CD-8DF0-9206E92DF3B7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\Services\SHChangeWeaponService.cpp">
+      <Filter>Source\Shooter\Private\AI\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\Services\SHFindEnemyService.cpp">
+      <Filter>Source\Shooter\Private\AI\Services</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\Services\SHFireService.cpp">
+      <Filter>Source\Shooter\Private\AI\Services</Filter>
+    </ClCompile>
+    <Filter Include="Source\Shooter\Private\AI\Tasks">
+      <UniqueIdentifier>{7E56AD38-8998-3369-B2C4-B251A9F07198}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\AI\Tasks\SHNextLocationTask.cpp">
+      <Filter>Source\Shooter\Private\AI\Tasks</Filter>
+    </ClCompile>
     <Filter Include="Source\Shooter\Private\Animations">
       <UniqueIdentifier>{84A634EC-50E9-35B1-B33B-5E160B87C54C}</UniqueIdentifier>
     </Filter>
@@ -71,6 +117,12 @@
     <Filter Include="Source\Shooter\Private\Components">
       <UniqueIdentifier>{2BA8A576-30AD-3662-B0DF-D6A21369D0F6}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Shooter\Private\Components\MyAIPerceptionComponent.cpp">
+      <Filter>Source\Shooter\Private\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Shooter\Private\Components\SHAIWeaponComponent.cpp">
+      <Filter>Source\Shooter\Private\Components</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Shooter\Private\Components\SHWeaponComponent.cpp">
       <Filter>Source\Shooter\Private\Components</Filter>
     </ClCompile>
@@ -152,6 +204,51 @@
     <ClInclude Include="..\..\Source\Shooter\Public\SHGameModeBase.h">
       <Filter>Source\Shooter\Public</Filter>
     </ClInclude>
+    <Filter Include="Source\Shooter\Public\AI">
+      <UniqueIdentifier>{47274490-2D43-3A40-B0FA-4891401FCBEB}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\SHAIController.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\SH_AICharacter.h">
+      <Filter>Source\Shooter\Public\AI</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\AI\Decorators">
+      <UniqueIdentifier>{675F21F6-F853-384A-92CE-04D975143D9D}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\Decorators\SHAmmoPickupDecorator.h">
+      <Filter>Source\Shooter\Public\AI\Decorators</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\Decorators\SHHealthPercentDecorator.h">
+      <Filter>Source\Shooter\Public\AI\Decorators</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\AI\EQS">
+      <UniqueIdentifier>{A6543FC3-DD2B-302B-93E6-EDEC5F8B0A88}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\EQS\EnvQueryTest_PickupCouldBeTaken.h">
+      <Filter>Source\Shooter\Public\AI\EQS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\EQS\SHEnemyEnvQueryContext.h">
+      <Filter>Source\Shooter\Public\AI\EQS</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\AI\Services">
+      <UniqueIdentifier>{89201853-7BCA-3671-8904-33C44C21C81C}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\Services\SHChangeWeaponService.h">
+      <Filter>Source\Shooter\Public\AI\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\Services\SHFindEnemyService.h">
+      <Filter>Source\Shooter\Public\AI\Services</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\Services\SHFireService.h">
+      <Filter>Source\Shooter\Public\AI\Services</Filter>
+    </ClInclude>
+    <Filter Include="Source\Shooter\Public\AI\Tasks">
+      <UniqueIdentifier>{902C65C3-9B5B-3D49-A726-77855A0C7DE6}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\AI\Tasks\SHNextLocationTask.h">
+      <Filter>Source\Shooter\Public\AI\Tasks</Filter>
+    </ClInclude>
     <Filter Include="Source\Shooter\Public\Animations">
       <UniqueIdentifier>{CDA6F573-05EF-31F0-8F57-051663816BBD}</UniqueIdentifier>
     </Filter>
@@ -170,6 +267,12 @@
     <Filter Include="Source\Shooter\Public\Components">
       <UniqueIdentifier>{387226A2-33BB-3F6C-A2AD-CACA7204043C}</UniqueIdentifier>
     </Filter>
+    <ClInclude Include="..\..\Source\Shooter\Public\Components\MyAIPerceptionComponent.h">
+      <Filter>Source\Shooter\Public\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Shooter\Public\Components\SHAIWeaponComponent.h">
+      <Filter>Source\Shooter\Public\Components</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\Components\SHWeaponComponent.h">
       <Filter>Source\Shooter\Public\Components</Filter>
     </ClInclude>
@@ -241,11 +344,6 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Shooter\Public\Weapon\Components\SHWeaponVFXComponent.h">
       <Filter>Source\Shooter\Public\Weapon\Components</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="SHHUtils.h">
-      <Filter>Source\Shooter\Public</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

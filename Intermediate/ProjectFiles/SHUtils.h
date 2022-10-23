@@ -5,7 +5,7 @@ class SHUtils
 {
 public:
 	template<typename T>
-	static T* GetSHPlayerComponent(APawn* PlayerPawn)
+	static T* GetSHPlayerComponent(AActor* PlayerPawn)
 	{
 		if (!PlayerPawn) return nullptr;
 

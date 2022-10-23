@@ -15,7 +15,7 @@
 DEFINE_LOG_CATEGORY_STATIC(BaseCharacterLog, All, All);
 
 // Sets default values
-ASH_BaseCharacter::ASH_BaseCharacter()
+ASH_BaseCharacter::ASH_BaseCharacter(const FObjectInitializer& ObjInit)
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;

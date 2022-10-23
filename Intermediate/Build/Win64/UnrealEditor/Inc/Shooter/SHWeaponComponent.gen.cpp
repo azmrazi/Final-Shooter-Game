@@ -157,15 +157,15 @@ void EmptyLinkFunctionForGeneratedCodeSHWeaponComponent() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_EquipAnimMontage_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_EquipAnimMontage;
-#if WITH_METADATA
-		static const UECodeGen_Private::FMetaDataPairParam NewProp_CurrentWeapon_MetaData[];
-#endif
-		static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentWeapon;
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_Weapons_Inner;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Weapons_MetaData[];
 #endif
 		static const UECodeGen_Private::FArrayPropertyParams NewProp_Weapons;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CurrentWeapon_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_CurrentWeapon;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_CurrentReloadAnimMontage_MetaData[];
 #endif
@@ -219,19 +219,19 @@ void EmptyLinkFunctionForGeneratedCodeSHWeaponComponent() {}
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_EquipAnimMontage = { "EquipAnimMontage", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USHWeaponComponent, EquipAnimMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_EquipAnimMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_EquipAnimMontage_MetaData)) };
-#if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentWeapon_MetaData[] = {
-		{ "ModuleRelativePath", "Public/Components/SHWeaponComponent.h" },
-	};
-#endif
-	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentWeapon = { "CurrentWeapon", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USHWeaponComponent, CurrentWeapon), Z_Construct_UClass_ASHBaseWeapon_NoRegister, METADATA_PARAMS(Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentWeapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentWeapon_MetaData)) };
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_Weapons_Inner = { "Weapons", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_ASHBaseWeapon_NoRegister, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_Weapons_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Components/SHWeaponComponent.h" },
 	};
 #endif
-	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_Weapons = { "Weapons", nullptr, (EPropertyFlags)0x0040000000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USHWeaponComponent, Weapons), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_Weapons_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_Weapons_MetaData)) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_Weapons = { "Weapons", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USHWeaponComponent, Weapons), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_Weapons_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_Weapons_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentWeapon_MetaData[] = {
+		{ "ModuleRelativePath", "Public/Components/SHWeaponComponent.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentWeapon = { "CurrentWeapon", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(USHWeaponComponent, CurrentWeapon), Z_Construct_UClass_ASHBaseWeapon_NoRegister, METADATA_PARAMS(Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentWeapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentWeapon_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentReloadAnimMontage_MetaData[] = {
 		{ "ModuleRelativePath", "Public/Components/SHWeaponComponent.h" },
@@ -244,9 +244,9 @@ void EmptyLinkFunctionForGeneratedCodeSHWeaponComponent() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_WeaponEquipSocketName,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_WeaponArmorySocketName,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_EquipAnimMontage,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentWeapon,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_Weapons_Inner,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_Weapons,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentWeapon,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_USHWeaponComponent_Statics::NewProp_CurrentReloadAnimMontage,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_USHWeaponComponent_Statics::StaticCppClassTypeInfo = {
@@ -285,9 +285,9 @@ void EmptyLinkFunctionForGeneratedCodeSHWeaponComponent() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SHWeaponComponent_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_USHWeaponComponent, USHWeaponComponent::StaticClass, TEXT("USHWeaponComponent"), &Z_Registration_Info_UClass_USHWeaponComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHWeaponComponent), 1466253281U) },
+		{ Z_Construct_UClass_USHWeaponComponent, USHWeaponComponent::StaticClass, TEXT("USHWeaponComponent"), &Z_Registration_Info_UClass_USHWeaponComponent, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(USHWeaponComponent), 3585397648U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SHWeaponComponent_h_1192149750(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SHWeaponComponent_h_2302661341(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SHWeaponComponent_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Components_SHWeaponComponent_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

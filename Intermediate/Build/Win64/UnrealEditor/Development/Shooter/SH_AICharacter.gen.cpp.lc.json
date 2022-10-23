@@ -1,0 +1,23 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\sh_aicharacter.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\shootereditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\unrealeditor\\development\\shooter\\definitions.shooter.h",
+            "c:\\games\\shooter 5.0 - 2\\source\\shooter\\public\\ai\\sh_aicharacter.h",
+            "c:\\games\\shooter 5.0 - 2\\source\\shooter\\public\\player\\sh_basecharacter.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\charactermovementreplication.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\rootmotionsource.generated.h",
+            "c:\\program files\\epic games\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\character.generated.h",
+            "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\sh_basecharacter.generated.h",
+            "c:\\games\\shooter 5.0 - 2\\intermediate\\build\\win64\\unrealeditor\\inc\\shooter\\sh_aicharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

@@ -247,4 +247,16 @@ bool USHWeaponComponent::TryToAddAmmo(TSubclassOf<ASHBaseWeapon> WeaponType, int
 	return false;
 }
 
+bool USHWeaponComponent::NeedAmmo(TSubclassOf<ASHBaseWeapon> WeaponType)
+{
+	for (const auto Weapon : Weapons)
+	{
+		if (Weapon && Weapon->IsA(WeaponType))
+		{
+			return !Weapon->IsAmmoFull();
+		}
+	}
+	return false;
+}
+
 

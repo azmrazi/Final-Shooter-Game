@@ -18,12 +18,9 @@ public:
 	// Sets default values for this component's properties
 	USHWeaponComponent();
 
-	void StartFire();
-
+	virtual void StartFire();
 	void StopFire();
-
-	void NextWeapon();
-
+	virtual void NextWeapon();
 	void Reload();
 
 	UFUNCTION(BlueprintCallable, Category = "UI")
@@ -33,11 +30,18 @@ public:
 	bool GetWeaponAmmoData(FAmmoData& AmmoData) const;
 
 	bool TryToAddAmmo(TSubclassOf<ASHBaseWeapon> WeaponType, int32 ClipsAmount);
+	bool NeedAmmo(TSubclassOf<ASHBaseWeapon> WeaponType);
 
 protected:
 	// Called when the game starts
+
+	int32 CurrentWeaponIndex = 0;
 	virtual void BeginPlay() override;
 	virtual void EndPlay(const EEndPlayReason::Type EndPlayReason) override;
+
+	bool CanFire() const;
+	bool CanEquip() const;
+	void EquipWeapon(int32 WeaponIndex);
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 	TArray<FWeaponData> WeaponData;
@@ -50,32 +54,27 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Animation")
 	UAnimMontage* EquipAnimMontage;
+
+	UPROPERTY()
+	TArray<ASHBaseWeapon*> Weapons;
+
+	UPROPERTY()
+	ASHBaseWeapon* CurrentWeapon = nullptr;
 private:
 
 	UPROPERTY()
-		ASHBaseWeapon* CurrentWeapon = nullptr;
+	UAnimMontage* CurrentReloadAnimMontage = nullptr;
 
-	UPROPERTY()
-		TArray<ASHBaseWeapon*> Weapons;
-
-	UPROPERTY()
-		UAnimMontage* CurrentReloadAnimMontage = nullptr;
-
-	int32 CurrentWeaponIndex = 0;
 	bool EquipAnimInProgress = false;
 	bool ReloadAnimInProgress = false;
 
 	void SpawnWeapons();
 	void AttachWeaponToSocket(ASHBaseWeapon* Weapon, USceneComponent* SceneComponent, const FName& SocketName);
-	void EquipWeapon(int32 WeaponIndex);
 
 	void PlayAnimMontage(UAnimMontage* Animation);
 	void InitAnimations();
 	void OnEquipFinished(USkeletalMeshComponent* MeshComponent);
 	void OnReloadFinished(USkeletalMeshComponent* MeshComponent);
-
-	bool CanFire() const;
-	bool CanEquip() const;
 	bool CanReload() const;
 
 	void OnEmptyClip(ASHBaseWeapon* AmmoEmptyWeapon);

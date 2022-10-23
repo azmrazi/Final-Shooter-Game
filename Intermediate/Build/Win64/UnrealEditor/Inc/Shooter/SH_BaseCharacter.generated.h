@@ -49,7 +49,7 @@ public: \
 
 #define FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_19_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ASH_BaseCharacter(const FObjectInitializer& ObjectInitializer); \
+	NO_API ASH_BaseCharacter(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASH_BaseCharacter) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ASH_BaseCharacter); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASH_BaseCharacter); \
@@ -68,7 +68,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ASH_BaseCharacter); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ASH_BaseCharacter); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ASH_BaseCharacter)
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ASH_BaseCharacter)
 
 
 #define FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_16_PROLOG \

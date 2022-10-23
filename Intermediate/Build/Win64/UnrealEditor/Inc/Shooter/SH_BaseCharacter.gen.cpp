@@ -209,6 +209,7 @@ void EmptyLinkFunctionForGeneratedCodeSH_BaseCharacter() {}
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "Player/SH_BaseCharacter.h" },
 		{ "ModuleRelativePath", "Public/Player/SH_BaseCharacter.h" },
+		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
 #if WITH_METADATA
@@ -318,9 +319,9 @@ void EmptyLinkFunctionForGeneratedCodeSH_BaseCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ASH_BaseCharacter, ASH_BaseCharacter::StaticClass, TEXT("ASH_BaseCharacter"), &Z_Registration_Info_UClass_ASH_BaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASH_BaseCharacter), 4005847298U) },
+		{ Z_Construct_UClass_ASH_BaseCharacter, ASH_BaseCharacter::StaticClass, TEXT("ASH_BaseCharacter"), &Z_Registration_Info_UClass_ASH_BaseCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASH_BaseCharacter), 248960734U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_618331057(TEXT("/Script/Shooter"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_1215075894(TEXT("/Script/Shooter"),
 		Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Shooter_5_0___2_Source_Shooter_Public_Player_SH_BaseCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -20,11 +20,12 @@ class SHOOTER_API ASH_BaseCharacter : public ACharacter
 
 public:
 	// Sets default values for this character's properties
-	ASH_BaseCharacter();
+	ASH_BaseCharacter(const FObjectInitializer& ObjInit);
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void OnDeath();
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 	USpringArmComponent* SpringArmComponent;
@@ -71,7 +72,6 @@ private:
 	void StartRunning();
 	void StopRunning();
 
-	void OnDeath();
 	void OnHealthChanged(float Health, float HealthDelta);
 
 	UFUNCTION()

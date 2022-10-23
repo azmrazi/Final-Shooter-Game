@@ -1,19 +1,5 @@
 ﻿  Using bundled DotNet SDK
   Log file: C:\Users\azmr2\AppData\Local\UnrealBuildTool\Log.txt
   Using 'git status' to determine working set for adaptive non-unity build (C:\Games\Shooter 5.0 - 2).
-  Creating makefile for ShooterEditor (.uproject file is newer)
-  Building ShooterEditor...
-  Using Visual Studio 2022 14.33.31630 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  [Adaptive Build] Excluded from Shooter unity file: SH_HealthComponent.cpp, SH_BaseCharacter.cpp, SHPlayerHUDWidget.cpp, SHWeaponFXComponent.cpp, SHWeaponVFXComponent.cpp, SHBaseWeapon.cpp, SHLauncherWeapon.cpp, SHProjectTile.cpp, SHRifleWeapon.cpp
-  Determining max actions to execute in parallel (8 physical cores, 16 logical cores)
-    Executing up to 8 processes, one per physical core
-    Requested 1,5 GB free memory per action, 1,1 GB available: limiting max parallel actions to 1
-  Building 4 actions with 1 process...
-  [1/4] Compile SHProjectTile.cpp
-  [2/4] Link UnrealEditor-Shooter.lib
-     Создается библиотека C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.lib и объект C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.exp
-  [3/4] Link UnrealEditor-Shooter.dll
-     Создается библиотека C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.suppressed.lib и объект C:\Games\Shooter 5.0 - 2\Intermediate\Build\Win64\UnrealEditor\Development\Shooter\UnrealEditor-Shooter.suppressed.exp
-  [4/4] WriteMetadata ShooterEditor.target
-  Total time in Parallel executor: 24,05 seconds
-  Total execution time: 28,38 seconds
+  Target is up to date
+  Total execution time: 0,98 seconds
